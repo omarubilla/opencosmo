@@ -1,5 +1,5 @@
 
-<h1 align="center">🔺 OpenCosmo</h1>
+<h1 align="left">🔺 OpenCosmo</h1>
 
 <p align="center">
   <img width="360" src="./logo.png" alt="OpenCosmo Logo">
