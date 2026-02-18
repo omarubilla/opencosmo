@@ -1,8 +1,10 @@
+
+<h1 align="center">🔺 OpenCosmo</h1>
+
 <p align="center">
   <img width="360" src="./logo.png" alt="OpenCosmo Logo">
 </p>
 
-<h1 align="center">🔺 OpenCosmo</h1>
 <p align="center">
   <strong>The Operating System for Autonomous Operators 🚀</strong><br>
   Deploy AI agents that don’t just chat — they plan, execute, govern, and act.
