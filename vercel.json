@@ -1,6 +1,6 @@
 {
   "framework": null,
-  "installCommand": "pnpm install --filter openclaw-control-ui... --frozen-lockfile",
+  "installCommand": "pnpm install --filter openclaw-control-ui... --no-frozen-lockfile",
   "buildCommand": "pnpm -C ui build",
   "outputDirectory": "dist/control-ui",
   "rewrites": [
