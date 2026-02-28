@@ -83,6 +83,14 @@
         text-align: center;
       }
 
+      .heading-logo {
+        width: clamp(88px, 10vw, 132px);
+        height: auto;
+        display: block;
+        margin: 0 auto 0.9rem;
+        filter: drop-shadow(0 10px 18px rgba(74, 69, 64, 0.18));
+      }
+
       .heading h1 {
         margin: 0;
         font-size: clamp(2.4rem, 6vw, 3.8rem);
@@ -255,6 +263,127 @@
         bottom: 0;
         height: 1px;
         background: linear-gradient(to right, transparent, color-mix(in oklab, var(--soft-gold) 50%, transparent), transparent);
+      }
+
+      .story-section {
+        width: 100%;
+        background: var(--bg-2);
+        padding: 5rem 1.5rem;
+      }
+
+      .story-inner {
+        max-width: 64rem;
+        margin: 0 auto;
+        display: grid;
+        gap: 2.5rem;
+      }
+
+      .story-header {
+        text-align: center;
+      }
+
+      .story-header h2 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        color: var(--text-primary);
+      }
+
+      .story-header p {
+        margin: 0.9rem auto 0;
+        max-width: 44rem;
+        color: var(--text-secondary);
+        font-size: clamp(1.05rem, 2vw, 1.25rem);
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      .story-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.65rem;
+      }
+
+      .story-pill {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 0.55rem 1rem;
+        background: var(--bg-2);
+        color: var(--text-secondary);
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        box-shadow: 6px 6px 12px var(--clay-dark), -6px -6px 12px var(--clay-light);
+      }
+
+      .story-pill.cta-call {
+        color: var(--button-gold);
+      }
+
+      .story-block {
+        border-radius: 1rem;
+        padding: 1.6rem 1.4rem;
+        background: var(--bg-2);
+        box-shadow: 10px 10px 20px var(--clay-dark), -10px -10px 20px var(--clay-light);
+      }
+
+      .story-block h3 {
+        margin: 0;
+        font-size: clamp(1.35rem, 3vw, 2rem);
+        font-weight: 400;
+        letter-spacing: -0.01em;
+      }
+
+      .story-block p {
+        margin: 0.9rem 0 0;
+        color: var(--text-muted);
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1.65;
+      }
+
+      .story-list {
+        margin: 1rem 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.55rem;
+      }
+
+      .story-list li {
+        color: var(--text-secondary);
+        font-size: 0.98rem;
+        font-weight: 400;
+      }
+
+      .story-list li::before {
+        content: "• ";
+        color: var(--soft-gold);
+      }
+
+      .timeline {
+        margin: 1rem 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 0.5rem;
+      }
+
+      .timeline li {
+        color: var(--text-secondary);
+        font-size: 0.96rem;
+        font-weight: 400;
+      }
+
+      .tagline-pick {
+        margin-top: 1rem;
+        color: var(--text-primary);
+        font-size: 0.95rem;
+        font-weight: 500;
       }
 
       .aep-section {
@@ -457,6 +586,7 @@
 
       <div class="content">
         <div class="heading">
+          <img class="heading-logo" src="/omni_black.png" alt="OpenCosmo logo" loading="eager" />
           <h1>
             OpenCosmo
             <span>We empower agents — elevate your existing workflow.</span>
@@ -485,7 +615,8 @@
         </section>
 
         <div class="ctas">
-          <a class="cta demo" href="/chat?session=agent%3Amain%3Amain">
+          <!-- Navigation disabled per request -->
+          <a class="cta demo">
             <span class="btn-content">
               Try-Demo (coming soon)
               <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -520,6 +651,116 @@
 
       <div class="ornament" aria-hidden="true"></div>
     </div>
+
+      <section class="story-section" aria-label="OpenCosmo enterprise overview">
+        <div class="story-inner">
+          <header class="story-header">
+            <h2>OpenCosmo</h2>
+            <p>The Command Center for Enterprise AI Agents</p>
+            <p>Your agents execute. OpenCosmo makes sure they align, coordinate, and stay under control.</p>
+          </header>
+
+          <div class="story-nav" aria-label="OpenCosmo navigation">
+            <span class="story-pill">Enterprise</span>
+            <span class="story-pill">Developers</span>
+            <span class="story-pill">Resources</span>
+            <span class="story-pill">About</span>
+            <span class="story-pill cta-call">Book a Strategy Call</span>
+          </div>
+
+          <article class="story-block">
+            <h3>OpenCosmo Enterprise<br />Cognitive Infrastructure for High-Stakes AI Execution</h3>
+            <p>
+              OpenCosmo is the execution and oversight layer for enterprise AI agents.
+              We give organizations a centralized command center to deploy, monitor, coordinate, and govern AI agents across workflows — with guardrails, observability, and human-in-the-loop control built in.
+            </p>
+            <p>From LLM → SQL pipelines to autonomous workflow agents, OpenCosmo ensures:</p>
+            <ul class="story-list">
+              <li>Agents don’t drift</li>
+              <li>Actions stay within policy</li>
+              <li>Humans remain in control</li>
+              <li>Every execution is traceable</li>
+            </ul>
+          </article>
+
+          <article class="story-block">
+            <h3>Why OpenCosmo Exists</h3>
+            <p>
+              Enterprise agents don’t fail because of intelligence. They fail because of lack of orchestration and control.
+              Most companies spin up agents, connect APIs, and hope for the best.
+            </p>
+            <p>
+              But once agents can send emails, query production databases, trigger workflows, and make financial or operational decisions, you need more than prompts.
+              You need infrastructure.
+            </p>
+          </article>
+
+          <article class="story-block">
+            <h3>The Agent Execution Platform (AEP)</h3>
+            <p>OpenCosmo introduces the Agent Execution Platform (AEP) — a centralized layer that sits between users, models, and tools.</p>
+            <p>AEP enables:</p>
+            <ul class="story-list">
+              <li>Controlled Execution — enforceable policies and runtime checks</li>
+              <li>Human-in-the-Loop Guardrails — approvals, kill switch, and override controls</li>
+              <li>Cross-Agent Coordination — shared execution environment, not prompt silos</li>
+              <li>Operational Observability — logs of tool calls, traces, flows, and state</li>
+              <li>Multi-Model Compatibility — Claude, OpenAI, local models, and enterprise systems</li>
+            </ul>
+          </article>
+
+          <article class="story-block">
+            <h3>Enterprise-Grade Controls</h3>
+            <p>OpenCosmo is designed for teams deploying agents in real operational environments — not just demos.</p>
+            <ul class="story-list">
+              <li>Role-Based Access Control</li>
+              <li>Execution Logging &amp; Replay</li>
+              <li>Policy Enforcement Layer</li>
+              <li>Secure Deployment (VPC, on-prem, or hybrid)</li>
+            </ul>
+          </article>
+
+          <article class="story-block">
+            <h3>Our Journey</h3>
+            <ul class="timeline">
+              <li>2024 – OpenClaw experimentation → autonomous desktop agent control</li>
+              <li>2025 – Transition to enterprise execution infrastructure</li>
+              <li>2026 – OpenCosmo AEP launched for controlled agent orchestration</li>
+            </ul>
+            <p>Built in Silicon Valley. Inspired by real-world AI failures. Designed for operators, not researchers.</p>
+          </article>
+
+          <article class="story-block">
+            <h3>Our Mission</h3>
+            <p>
+              AI agents will increasingly operate businesses, access sensitive systems, coordinate across teams, and make operational decisions.
+              OpenCosmo ensures that as autonomy increases, control increases with it.
+            </p>
+            <p>We are building the infrastructure layer between AI capability and enterprise reality.</p>
+          </article>
+
+          <article class="story-block">
+            <h3>Who It’s For</h3>
+            <ul class="story-list">
+              <li>Enterprises deploying AI agents into production</li>
+              <li>AI-native startups scaling agentic workflows</li>
+              <li>Ops teams integrating LLMs into internal systems</li>
+              <li>CTOs who want control, not chaos</li>
+            </ul>
+          </article>
+
+          <article class="story-block">
+            <h3>Core Philosophy</h3>
+            <p>Power without control is risk. Autonomy without oversight is liability.</p>
+            <p>OpenCosmo enables:</p>
+            <ul class="story-list">
+              <li>Safer autonomy</li>
+              <li>Structured execution</li>
+              <li>Human-commanded AI</li>
+            </ul>
+            <p class="tagline-pick">Tagline: Infrastructure for Controlled Autonomy</p>
+          </article>
+        </div>
+      </section>
 
     <section class="aep-section" id="aep">
       <div class="aep-copy">
