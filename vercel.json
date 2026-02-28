@@ -3,14 +3,11 @@
   "installCommand": "cd ui && npm install",
   "buildCommand": "cd ui && npm run build",
   "outputDirectory": "dist/control-ui",
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
-      "destination": "/landing.html",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
+      "destination": "/landing.html"
+    },
     {
       "source": "/chat",
       "destination": "/index.html"
